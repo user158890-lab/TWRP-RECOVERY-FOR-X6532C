@@ -6,12 +6,6 @@ This repository contains the recovery fstab and custom recovery  for the Infinix
 
 The recovery image belongs in the `vendor_boot` partition, not the `recovery` partition.write it only to the slot that is currently active. 
 
-Before writing an image, confirm all of the following:
-
-1. The image is built for X6532C (INFINIX SMART 9 HD) 
-2. The image size matches the device vendor_boot partition.
-3. The active slot is known.
-
 ## FEATURES
 
 - No data wipe is required to use this recovery.
