@@ -12,14 +12,14 @@ Before writing an image, confirm all of the following:
 2. The image size matches the device vendor_boot partition.
 3. The active slot is known.
 
-###FEATURES
+## FEATURES
 
 - No data wipe is required to use this recovery.
 - Works with encrypted devices without removing existing encryption.
 - Supports flashing, backup, installing ZIP and image files and all other custom recovery features. 
 - Tested on a real Infinix Smart 9 HD X6532C device.
 
-###TIPS FOR FLASHING 
+## TIPS FOR FLASHING 
 
 USING FASTBOOT : fastboot flash vendor_boot_a/b(recovery.img)
 
