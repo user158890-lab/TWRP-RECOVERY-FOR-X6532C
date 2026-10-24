@@ -1,0 +1,13 @@
+# TWRP recovery fstab for Infinix Smart 9 HD (X6532C)
+# Android 12 vendor layout with A/B dynamic partitions and file-based encryption.
+
+/system       ext4    ro,wait,logical,slotselect
+/system       erofs   ro,wait,logical,slotselect
+/vendor       erofs   ro,wait,logical,slotselect
+/vendor       ext4    ro,wait,logical,slotselect
+/misc         emmc    /dev/block/by-name/para
+/metadata     ext4    /dev/block/by-name/md_udc    noatime,nosuid,nodev,discard,wait
+/data         f2fs    /dev/block/by-name/userdata  noatime,nosuid,nodev,discard,fsync_mode=nobarrier,inlinecrypt,wait,latemount,quota,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+
+# X6532C uses an integrated system layout. system_ext and product are
+# directories under /system, not separate filesystem entries here.
